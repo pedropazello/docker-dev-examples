@@ -12,6 +12,7 @@ services:
       - "3001:3306"
   web:
     build: .
+    image: nodejs-with-mysql:0.0.1
     command: bash -c "node api/index.js"
     restart: always
     volumes:
