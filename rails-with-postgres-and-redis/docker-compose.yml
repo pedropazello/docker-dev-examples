@@ -11,7 +11,7 @@ services:
     ports:
       - "3001:5432"
   web:
-    image: b2b_dorel_web:1.0.1-ruby-2.6.8
+    image: myapp:1.0.1-ruby-2.6.8
     build: .
     command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
     volumes:
